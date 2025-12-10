@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ---- ROOT COLORS ---- */
+@layer base {
+  :root {
+    --background: 27 27 27;
+    --foreground: 225 225 225;
+    --muted: 115 115 115;
+    --accent: 254 254 91;
+  }
+}
+
+/* ---- UTILITIES ---- */
+@layer utilities {
+
+  /* Pause animation utility */
+  .pause {
+    animation-play-state: paused;
+  }
+  
+
+  /* Firefly glowing effect */
+  .bg-firefly-radial {
+    background: radial-gradient(
+      circle,
+      rgba(255, 255, 150, 1) 0%,
+      rgba(255, 255, 150, 0) 70%
+    );
+    filter: blur(3px);
+  }
+  .custom-bg{
+    @apply bg-background/20 border border-accent/30 border-solid backdrop-blur-[6px] shadow-glass-inset hover:shadow-glass-sm;
+  }
+
+
+  /* Firefly movement animation */
+  @keyframes move {
+    0% {
+      transform: translate(0px, 0px);
+      opacity: 0.4;
+    }
+    100% {
+      transform: translate(100px, 100px);
+      opacity: 1;
+    }
+  }
+}
