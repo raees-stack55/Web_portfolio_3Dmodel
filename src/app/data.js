@@ -96,7 +96,7 @@ export const BtnList = [
   { label: "Contact", link: "/contact", icon: "contact", newTab: false },
   {
     label: "Github",
-    link: "https://www.github.com/codebucks27",
+    link: "https://github.com/raees-stack55",
     icon: "github",
     newTab: true,
   },
